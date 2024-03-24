@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+main {
+  height: 100vh;
+}
+
+main.dark {
+  background-color: hsl(235, 21%, 11%);
+}
+
+.todo-lists {
+  border-radius: 10px;
+  position: relative;
+  top: -30px;
+}
+
+.todo-lists.dark {
+  background-color: hsl(235, 24%, 19%);
+}
+.todo-lists.light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.todos {
+  padding: 1em 0 1em 1em;
+}
+
+.todos.dark {
+  border-bottom: 2px solid hsl(233, 14%, 35%);
+}
+
+.todos.light {
+  border-bottom: 2px solid hsl(233, 11%, 84%);
+}
+
+.todos label {
+  padding-left: 0.7em;
+}
+
+.dark label {
+  color: hsl(234, 39%, 85%);
+}
+
+.light label {
+  color: hsl(235, 19%, 35%);
+}
+
+label.completed {
+  text-decoration: line-through;
+}
+
+.dark label.completed {
+  color: hsl(236, 9%, 61%);
+}
+
+.light label.completed {
+  color: hsl(233, 11%, 84%);
+}
+
+h1 {
+  margin: 0;
+  color: hsl(0, 0%, 98%);
+  font-weight: 700;
+}
+
+.header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 2.5em;
+  padding-bottom: 3em;
+}
+
+.header.dark {
+  background-image: url("/images/bg-mobile-dark.jpg");
+}
+
+.header.light {
+  background-image: url("/images/bg-mobile-light.jpg");
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header .flex {
+  justify-content: space-between;
+}
+
+.create-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  width: 100%;
+  padding: 1.5em 3em;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+}
+
+input.dark {
+  background-color: hsl(235, 24%, 19%);
+}
+
+input.light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.flex .allign-left {
+  padding-left: 1em;
+}
+
+.flex .allign-right {
+  display: block;
+  margin-left: auto;
+  padding-right: 1em;
+}
+
+.todos-bottom.dark {
+  color: hsl(233, 14%, 35%);
+}
+
+.todos-bottom.light {
+  color: hsl(236, 9%, 61%);
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  appearance: none;
+  background-color: inherit;
+  padding: 1em;
+}
+
+input[type="radio"].dark,
+.icon-check.dark {
+  border: 1px solid hsl(233, 14%, 35%);
+}
+
+input[type="radio"].light,
+.icon-check.light {
+  border: 1px solid hsl(233, 11%, 84%);
+}
+
+.icon-check {
+  border-radius: 50%;
+  padding: 10px;
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
