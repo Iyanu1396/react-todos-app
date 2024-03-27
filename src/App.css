@@ -16,16 +16,27 @@ main.dark {
   background-color: hsl(235, 21%, 11%);
 }
 
+main.light {
+  background-color: hsl(236, 33%, 92%);
+}
+
 .todo-lists {
-  border-radius: 10px;
   position: relative;
   top: -30px;
 }
 
-.todo-lists.dark {
+.todo-lists,
+.status {
+  border-radius: 10px;
+}
+
+.todo-lists.dark,
+.status.dark {
   background-color: hsl(235, 24%, 19%);
 }
-.todo-lists.light {
+
+.todo-lists.light,
+.status.light {
   background-color: hsl(0, 0%, 98%);
 }
 
@@ -162,4 +173,35 @@ input[type="radio"].light,
   border-radius: 50%;
   padding: 10px;
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.status {
+  font-weight: 700;
+  font-size: 1.2rem;
+  justify-content: center;
+  gap: 1em;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.status-clicked {
+  color: hsl(220, 98%, 61%);
+}
+
+@media (min-width: 768px) {
+  .header.dark {
+    background-image: url("/public/images/bg-desktop-dark.jpg");
+  }
+
+  .header.light {
+    background-image: url("/public/images/bg-desktop-light.jpg");
+  }
+  .container {
+    max-width: 500px;
+  }
+  body {
+    font-size: 1.2rem;
+  }
 }

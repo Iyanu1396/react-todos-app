@@ -4,6 +4,7 @@ import iconCheck from "../assets/icon-check.svg";
 
 function TodoLists({
   todoLists,
+  filteredTodos,
   handleChecked,
   removeTodo,
   colorMode,
@@ -22,7 +23,7 @@ function TodoLists({
                 id={todoList.id}
                 name={todoList.todo}
                 checked={todoList.isChecked}
-                className={colorMode ? " dark " : " light "}
+                className={`cursor ${colorMode ? " dark " : " light "}`}
                 onChange={() => handleChecked(todoList.id)}
               />
             ) : (
@@ -36,7 +37,7 @@ function TodoLists({
 
             <label
               htmlFor={todoList.id}
-              className={` ${todoList.isChecked ? "completed" : ""}`}
+              className={`cursor ${todoList.isChecked ? "completed" : ""}`}
             >
               {todoList.todo}
             </label>
